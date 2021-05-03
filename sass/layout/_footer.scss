@@ -1,0 +1,42 @@
+footer { 
+    background-color: #353535;
+    height: 200px;
+    margin-top: 70px;
+}
+
+.footer__container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer__logo  { 
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer__title {
+    color: #fff;
+    font-family: 'Shrikhand', cursive;
+    font-size: 2em;
+}
+
+.footer__line { 
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+
+}
+
+.footer__line i {
+    margin-right: 20px;
+    color: #fff;
+}
+
+footer p { 
+    margin:  0;
+}
+
+footer a { 
+    color: #fff;
+}

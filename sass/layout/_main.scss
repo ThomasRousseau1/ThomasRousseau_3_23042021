@@ -27,6 +27,8 @@ main {
 }
 
 .fonctionnement__box { 
+    display: flex;
+    flex-direction: column;
     background-color: #f6f6f6;
     width: 15rem;
     height: 150px;
@@ -34,31 +36,75 @@ main {
     border-radius: 50px;
     text-align: center;
     font-size: 1.5rem;
-    box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.15);
+    box-shadow: $box-shadow;
     cursor: pointer;
     transition: transform 300ms;
     &:hover { 
         transform: scale(1.10);
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($colour-secondary, $colour-primary);
         color: #fff;
         box-shadow: none;
     }
 
 .number { 
+    background-color: $colour-primary;
+    color: #fff;
     width: 30px;
     border-radius: 50%;
-    background-color: #9356DC;
-    color: #fff;
+    align-self: center;
+    position: relative;
+    bottom: 45px;
 }
 }
 
 /* PARTIE RESTAURANTS */
+.container__card { 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.container__card__title { 
+    text-align: center;
+    margin-bottom: 50px;
+}
 .card { 
     background: #fff;
-    width: 30vw;
-    height: 20vw;
+    width: 45%;
+    height: 360px;
     border-radius: 15px;
-    display: flex;
-    flex-direction: row;
+    margin-bottom: 50px;
+    box-shadow: $box-shadow;
+}
+
+.card-img img{
+    height: 28vh;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card__infos {
+    margin-left: 20px;
+}
+
+.card__infos h3, p { 
+    margin: 10px 0px 10px 0px;
+}
+
+.heart:hover { 
+    font-weight: bold;
+    color: $colour-primary;
+    /*color: linear-gradient(#FF79DA, #9356DC);*/
+}
+
+.card__heart { 
+    float: right;
+    position: relative;
+    bottom: 50px;
+    padding-right: 20px;
+    font-size: 2vw;
 }
 

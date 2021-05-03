@@ -7,6 +7,7 @@ html, body {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 body {
@@ -24,6 +25,7 @@ h1 {
   background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   color: #fff;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   font-weight: bold;
   font-size: 0.9rem;
   cursor: pointer;
@@ -32,8 +34,8 @@ h1 {
   transition: transform 300ms;
 }
 .reservation__button:hover {
-  transform: scale(0.95);
-  color: #000;
+  transform: scale(1.15);
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -66,6 +68,48 @@ header {
   margin-right: 10px;
 }
 
+footer {
+  background-color: #353535;
+  height: 200px;
+  margin-top: 70px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer__logo {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer__title {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+}
+
+.footer__line {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.footer__line i {
+  margin-right: 20px;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+}
+
 main {
   max-width: 1200px;
   margin: auto;
@@ -96,6 +140,8 @@ main {
 }
 
 .fonctionnement__box {
+  display: flex;
+  flex-direction: column;
   background-color: #f6f6f6;
   width: 15rem;
   height: 150px;
@@ -114,20 +160,65 @@ main {
   box-shadow: none;
 }
 .fonctionnement__box .number {
-  width: 30px;
-  border-radius: 50%;
   background-color: #9356DC;
   color: #fff;
+  width: 30px;
+  border-radius: 50%;
+  align-self: center;
+  position: relative;
+  bottom: 45px;
 }
 
 /* PARTIE RESTAURANTS */
+.container__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.container__card__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .card {
   background: #fff;
-  width: 30vw;
-  height: 20vw;
+  width: 45%;
+  height: 360px;
   border-radius: 15px;
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+.card-img img {
+  height: 28vh;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card__infos {
+  margin-left: 20px;
+}
+
+.card__infos h3, p {
+  margin: 10px 0px 10px 0px;
+}
+
+.heart:hover {
+  font-weight: bold;
+  color: #9356DC;
+  /*color: linear-gradient(#FF79DA, #9356DC);*/
+}
+
+.card__heart {
+  float: right;
+  position: relative;
+  bottom: 50px;
+  padding-right: 20px;
+  font-size: 2vw;
 }
 
 /*# sourceMappingURL=style.css.map */
