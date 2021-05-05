@@ -78,12 +78,16 @@ main {
     box-shadow: $box-shadow;
 }
 
-.card-img img{
-    height: 28vh;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+.card__img {
+    height: 80%;
+    & .restaurant-img { 
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
 }
 
 .card__infos {

@@ -14,6 +14,7 @@
     transition: transform 300ms;
     &:hover{
         transform: scale(1.15);
+        background: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
         box-shadow: $box-shadow-darker;
     }
 }
