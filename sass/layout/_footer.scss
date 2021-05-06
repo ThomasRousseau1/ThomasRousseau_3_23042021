@@ -5,8 +5,7 @@ footer {
 }
 
 .footer__container { 
-    display: flex;
-    flex-direction: row;
+    @extend %flex-row;
     justify-content: space-around;
 }
 
@@ -22,8 +21,7 @@ footer {
 }
 
 .footer__line { 
-    display: flex;
-    flex-direction: row;
+    @extend %flex-row;
     padding-top: 20px;
 
 }
@@ -39,4 +37,25 @@ footer p {
 
 footer a { 
     color: #fff;
+}
+
+@media screen and(max-width: 768px) {
+    footer {
+        height: 220px;
+    }
+    .footer__title { 
+        margin: 10px;
+        text-align: start;
+        padding-left: 20px;
+        font-size: 1.5em;
+    }
+    .footer__container { 
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .footer__line {
+        padding-top: 10px;
+    }
 }

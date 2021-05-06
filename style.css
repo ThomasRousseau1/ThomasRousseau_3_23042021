@@ -1,3 +1,9 @@
+@charset "UTF-8";
+.fonctionnement__box__container, .footer__line, .footer__container {
+  display: flex;
+  flex-direction: row;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -18,6 +24,7 @@ h1 {
   font-size: 1.5rem;
 }
 
+/* Bouton page d'accueil partie réservation */
 .reservation__button {
   width: 230px;
   height: 60px;
@@ -41,31 +48,28 @@ h1 {
 
 header {
   background-color: #fff;
-  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
 }
-
-.header__container {
+header .header__container {
   display: flex;
-  height: 100px;
+  height: 80px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 10rem;
   padding-right: 10rem;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
 }
-
-.header__logo {
-  height: 50px;
+header .header__container .header__logo {
+  height: 40px;
 }
-
-.header__location {
+header .header__location {
   background-color: #eaeaea;
-  width: 200px;
+  width: 100%;
   height: 40px;
   padding-top: 20px;
   text-align: center;
+  margin-top: 5px;
 }
-
-.header__location i {
+header .header__location .header__location i {
   margin-right: 10px;
 }
 
@@ -76,8 +80,6 @@ footer {
 }
 
 .footer__container {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
@@ -93,8 +95,6 @@ footer {
 }
 
 .footer__line {
-  display: flex;
-  flex-direction: row;
   padding-top: 20px;
 }
 
@@ -111,6 +111,28 @@ footer a {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    height: 220px;
+  }
+
+  .footer__title {
+    margin: 10px;
+    text-align: start;
+    padding-left: 20px;
+    font-size: 1.5em;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .footer__line {
+    padding-top: 10px;
+  }
+}
 main {
   max-width: 1200px;
   margin: auto;
@@ -135,8 +157,6 @@ main {
 }
 
 .fonctionnement__box__container {
-  display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -166,10 +186,50 @@ main {
   width: 30px;
   border-radius: 50%;
   align-self: center;
-  position: relative;
-  bottom: 45px;
 }
 
+/* Pour cacher les icônes */
+@media screen and (min-width: 768px) {
+  .fonctionnement__icon {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container__fonctionnement {
+    height: 500px;
+  }
+
+  .fonctionnement__box__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fonctionnement__box {
+    margin: 10px;
+    height: 80px;
+    width: 90%;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+  }
+  .fonctionnement__box:hover {
+    transform: scale(1);
+  }
+
+  .number {
+    margin-left: -10px;
+  }
+
+  .fonctionnement__icon {
+    color: grey;
+    margin: 15px;
+  }
+
+  .fonctionnement__text {
+    margin: 15px;
+  }
+}
 /* PARTIE RESTAURANTS */
 .container__card {
   display: flex;
@@ -222,7 +282,34 @@ main {
   position: relative;
   bottom: 50px;
   padding-right: 20px;
-  font-size: 2vw;
+  font-size: 2rem;
+}
+
+/* Pour Laptop L */
+@media screen and (max-width: 1440px) {
+  .container__card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container__card {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card {
+    width: 100%;
+    height: 250px;
+  }
+
+  .card__img {
+    height: 180px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
