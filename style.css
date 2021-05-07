@@ -53,9 +53,7 @@ header .header__container {
   display: flex;
   height: 80px;
   align-items: center;
-  justify-content: space-around;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  justify-content: center;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
 }
 header .header__container .header__logo {
@@ -310,6 +308,40 @@ main {
   .card__img {
     height: 180px;
   }
+}
+/*POUR LES PAGES MENU*/
+/*HEADER*/
+.arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.top__image {
+  width: 100%;
+}
+
+.main-image {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  align-self: center;
+}
+
+/*PARTIE MENUS*/
+.menus__main__title {
+  display: flex;
+}
+
+.menus {
+  width: 100%;
+}
+
+.menus__titles__border {
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

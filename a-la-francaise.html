@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <title>À la française</title>
 </head>
 
 <body>
-<header class="header">
-    <div>
-        <span>
-            <i class="fas fa-arrow-left"></i>
-        </span>
-        <div class="container-header--image">
-            <img src="ressources/images/logo/ohmyfood.png" alt="ohmyfood-logo" class="header__logo">
+    <header class="header">
+        <div class="header__container">
+            <span>
+                <a href="index.html"><i class="fas fa-arrow-left arrow"></i></a>
+            </span>
+            <div class="container-header--image">
+                <img src="ressources/images/logo/ohmyfood.png" alt="ohmyfood-logo" class="header__logo">
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
 <main>
-    <div class="top-image">
-        <img src="ressources/images/restaurants/a-la-francaise.jpg" alt="a-la-francaise">
+    <div class="top__image">
+        <img src="ressources/images/restaurants/a-la-francaise.jpg" alt="a-la-francaise" class="main-image">
     </div>
     <div>
         <h2>À la française</h2>
@@ -31,7 +31,7 @@
     </div>
     <!--Entrées-->
     <div>
-        <div>Entrées</div>
+        <div>ENTRÉES</div>
         <div>
             <h4>Tartare de poulpe acidulé</h4>
             <p>Aux zestes d'orange</p>
@@ -48,7 +48,7 @@
             <p>20€</p>
         </div>
         <!--Plats-->
-        <div>Plats</div>
+        <div>PLATS</div>
         <div>
             <h4>Coquilles Saint-Jacques</h4>
             <p>Accompagnées d'une purée de panais</p>
@@ -65,7 +65,7 @@
             <p>44€</p>
         </div>
         <!--Desserts-->
-        <div>Desserts</div>
+        <div>DESSERTS</div>
         <div>
             <h4>Pétales de violettes glacés</h4>
             <p>Et purée de noisettes</p>
@@ -90,20 +90,24 @@
 </main>
 
 <footer>
-    <img src="ressources/images/logo/ohmyfood.png" alt="ohmyfood-logo" id="logo">
-    <div>
-        <i class="fas fa-utensils"></i>
-        <p>Proposer un restaurant</p>
+    <div class="footer__logo">
+        <h2 class="footer__title">ohmyfood</h2>
     </div>
-    <div>
-        <i class="fas fa-hands-helping"></i>
-        <p>Devenir partenaire</p>
-    </div>
-    <div>
-        <p>Mentions Légales</p>
-    </div>
-    <div>
-        <p><a href="mailto:thomas.rousseau500@outlook.fr">Contact</a></p>
+    <div class="footer__container">
+        <div class="footer__line">
+            <i class="fas fa-utensils"></i>
+            <p><a href="#">Proposer un restaurant</a></p>
+        </div>
+        <div class="footer__line">
+            <i class="fas fa-hands-helping"></i>
+            <p><a href="#">Devenir partenaire</a></p>
+        </div>
+        <div class="footer__line">
+            <p><a href="#">Mentions Légales</a></p>
+        </div>
+        <div class="footer__line">
+            <p><a href="mailto:thomas.rousseau500@outlook.fr">Contact</a></p>
+        </div>
     </div>
 </footer>
 <script src="https://kit.fontawesome.com/82c91e6d22.js" crossorigin="anonymous"></script>

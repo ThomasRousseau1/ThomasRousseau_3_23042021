@@ -4,9 +4,7 @@ header {
         display: flex;
         height: 80px;
         align-items: center;
-        justify-content: space-around;
-        padding-left: 10rem;
-        padding-right: 10rem;
+        justify-content: center;
         box-shadow: $box-shadow;
         .header__logo {
             height: 40px;
