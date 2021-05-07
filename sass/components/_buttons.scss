@@ -10,9 +10,9 @@
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
     transition: transform 300ms;
+    margin: auto;
+    display: block;
     &:hover{
         transform: scale(1.15);
         background: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
