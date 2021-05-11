@@ -1,14 +1,14 @@
 /* Bouton page d'accueil partie réservation */
 .reservation__button {
     width:230px;
-    height: 60px;
+    height: 50px;
     border-radius: 50px;
     background: linear-gradient($colour-secondary, $colour-primary);
     border-style: none;
     color: #fff;
     box-shadow: $box-shadow;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 300ms;
     margin: auto;

@@ -65,6 +65,21 @@
     }
 }
 
+.menus__new { 
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    color: #32a588;
+    background-color: $colour-tertiary;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+
+}
+
 /* Laptop L */ 
 
 @media screen and (max-width: 1440px) {

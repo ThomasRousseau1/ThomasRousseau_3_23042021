@@ -1,42 +1,41 @@
-footer { 
-    background-color: #353535;
+.footer { 
+    background-color: $colour-footer;
     height: 200px;
     margin-top: 70px;
-}
 
-.footer__container { 
-    @extend %flex-row;
-    justify-content: space-around;
-}
+    p { 
+        margin:  0;
+    }
 
-.footer__logo  { 
-    text-align: center;
-    padding-top: 10px;
-}
+    a { 
+        color: #fff;
+    }
 
-.footer__title {
-    color: #fff;
-    font-family: 'Shrikhand', cursive;
-    font-size: 2em;
-}
-
-.footer__line { 
-    @extend %flex-row;
-    padding-top: 20px;
-
-}
-
-.footer__line i {
-    margin-right: 20px;
-    color: #fff;
-}
-
-footer p { 
-    margin:  0;
-}
-
-footer a { 
-    color: #fff;
+    &__container { 
+        @extend %flex-row;
+        justify-content: space-around;
+    }
+    
+    &__logo  { 
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    &__title {
+        color: #fff;
+        font-family: 'Shrikhand', cursive;
+        font-size: 2em;
+    }
+    
+    &__line { 
+        @extend %flex-row;
+        padding-top: 20px;
+        i {
+            margin-right: 20px;
+            color: #fff;
+        }
+    
+    }   
 }
 
 @media screen and(max-width: 768px) {

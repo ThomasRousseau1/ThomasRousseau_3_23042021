@@ -27,14 +27,14 @@ h1 {
 /* Bouton page d'accueil partie réservation */
 .reservation__button {
   width: 230px;
-  height: 60px;
+  height: 50px;
   border-radius: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   color: #fff;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: transform 300ms;
   margin: auto;
@@ -81,41 +81,34 @@ header .header__location .header__location i {
   margin: 30px;
 }
 
-footer {
+.footer {
   background-color: #353535;
   height: 200px;
   margin-top: 70px;
 }
-
+.footer p {
+  margin: 0;
+}
+.footer a {
+  color: #fff;
+}
 .footer__container {
   justify-content: space-around;
 }
-
 .footer__logo {
   text-align: center;
   padding-top: 10px;
 }
-
 .footer__title {
   color: #fff;
   font-family: "Shrikhand", cursive;
   font-size: 2em;
 }
-
 .footer__line {
   padding-top: 20px;
 }
-
 .footer__line i {
   margin-right: 20px;
-  color: #fff;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
   color: #fff;
 }
 
@@ -150,7 +143,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 40px;
+}
+.container__reservation h1, .container__reservation p {
+  text-align: center;
+  margin: 10px;
+}
+.container__reservation :nth-child(3) {
+  margin: 20px;
 }
 
 .container__fonctionnement {
@@ -258,6 +258,7 @@ main {
   border-radius: 15px;
   margin-bottom: 50px;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .card__img {
@@ -310,6 +311,10 @@ main {
   }
 }
 @media screen and (max-width: 425px) {
+  .fonctionnement__text {
+    font-size: 5vw;
+  }
+
   .card {
     width: 100%;
     height: 250px;
@@ -385,6 +390,20 @@ main {
   font-weight: lighter;
 }
 
+.menus__new {
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  color: #32a588;
+  background-color: #99E2D0;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
 /* Laptop L */
 @media screen and (max-width: 1440px) {
   .menus {
@@ -392,6 +411,7 @@ main {
     justify-content: space-evenly;
   }
 }
+/* Menu entrées La note enchantée */
 /* Tablettes et portables */
 @media screen and (max-width: 780px) {
   .menus {
