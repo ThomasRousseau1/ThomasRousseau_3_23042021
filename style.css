@@ -9,6 +9,7 @@ html, body {
   padding: 0;
   max-width: 100%;
   background-color: #f6f6f6;
+  position: relative;
 }
 
 a {
@@ -44,6 +45,64 @@ h1 {
   transform: scale(1.15);
   background: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  animation: fade-in 3s ease-in-out normal forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.loader__letters {
+  margin-bottom: 1000px;
+}
+.loader__letters .letter {
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  animation: letters 0.8s linear infinite;
+}
+.loader__letters .letter.letter1 {
+  color: #9356DC;
+  animation-delay: 0.1s;
+}
+.loader__letters .letter.letter2 {
+  color: #FF79DA;
+  animation-delay: 0.2s;
+}
+.loader__letters .letter.letter3 {
+  color: #99E2D0;
+  animation-delay: 0.3s;
+}
+@keyframes letters {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 7px #000;
+  }
+  100% {
+    opacity: 0;
+    text-shadow: none;
+    visibility: hidden;
+    display: none;
+  }
 }
 
 header {
@@ -294,6 +353,20 @@ main {
   font-size: 2rem;
 }
 
+.menus__new {
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  color: #32a588;
+  background-color: #99E2D0;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
 /* Pour Laptop L */
 @media screen and (max-width: 1440px) {
   .container__card {
@@ -337,14 +410,6 @@ main {
   margin-bottom: 20px;
 }
 
-.menus__main__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  width: 100%;
-}
-
 .restaurant__title {
   font-family: "Shrikhand", cursive;
   font-size: 2.5rem;
@@ -361,12 +426,17 @@ main {
   margin-bottom: 20px;
   background-color: #f6f6f6;
 }
-
-.menus__titles {
+.menus .menus__main__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 100%;
+}
+.menus .menus__titles {
   font-weight: lighter;
 }
-
-.menus__titles__border {
+.menus .menus__titles__border {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   margin-bottom: 10px;
@@ -375,35 +445,105 @@ main {
 }
 
 .menus__card {
+  position: relative;
   background-color: #fff;
   width: 350px;
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  cursor: pointer;
+  visibility: hidden;
+  animation: apparition 1.5s cubic-bezier(0, 0, 0, 1) forwards;
+  /* Pour que chaque enfant apparaisse un par un */
+  /* Icones reservation pour les plats */
 }
 .menus__card p:first-child {
   font-size: 1.1rem;
 }
 .menus__card p:nth-child(2) {
+  font-size: 1rem;
   font-weight: lighter;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.menus__new {
-  width: 80px;
-  padding: 10px;
-  text-align: center;
+.menus__card:hover .card__check {
   display: inline-block;
-  color: #32a588;
-  background-color: #99E2D0;
-  border-radius: 3px;
+}
+.menus__card:hover .card__check__icon {
+  transform: rotate(-360deg);
+}
+.menus__card:hover .menus__price {
+  transition: 400ms;
+  margin-right: 80px;
+}
+.menus__card:hover p:nth-child(2) {
+  width: 65%;
+}
+.menus__card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.menus__card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.menus__card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.menus__card .card__check {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 20px;
+  height: 100%;
+  width: 5rem;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #99E2D0;
+  text-align: center;
+  animation: validation 0.4s ease;
+  transform-origin: right 50%;
+  display: none;
+}
+.menus__card .card__check__icon {
+  animation: rotation 0.4s linear;
+  position: relative;
+  top: 20px;
+  font-size: 2rem;
+  color: #fff;
 }
 
+/* KEYFRAMES */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes validation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
 /* Laptop L */
 @media screen and (max-width: 1440px) {
   .menus {

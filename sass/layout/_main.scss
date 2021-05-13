@@ -160,6 +160,20 @@ main {
     font-size: 2rem;
 }
 
+.menus__new {
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    color: #32a588;
+    background-color: #99E2D0;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
 /* Pour Laptop L */
 @media  screen and (max-width: 1440px) {
     .container__card { 
