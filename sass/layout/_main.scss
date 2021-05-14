@@ -146,42 +146,6 @@ main {
     margin: 10px 0px 10px 0px;
 }
 
-
-.card__heart { 
-    float: right;
-    position: relative;
-    bottom: 50px;
-    right: 30px;
-    padding-right: 20px;
-    font-size: 2rem;
-    &:hover :nth-child(2) {
-        z-index: 3;
-        visibility: visible;
-    }
-    &:hover :first-child {
-        visibility: hidden;
-    }
-}
-
-.heart { 
-    position: absolute;
-    z-index: 2;
-}
-
-.heart2 {
-    background: linear-gradient($colour-secondary, $colour-primary);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 35px;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    visibility: hidden;
-}
-
 .menus__new {
     width: 80px;
     padding: 10px;

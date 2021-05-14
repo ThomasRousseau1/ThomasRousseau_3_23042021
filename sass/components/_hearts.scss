@@ -1,0 +1,41 @@
+.card__heart { 
+    float: right;
+    position: relative;
+    bottom: 50px;
+    right: 30px;
+    padding-right: 20px;
+    font-size: 2rem;
+    .heart { 
+        position: absolute;
+    }
+    
+    .heart2 {
+        width: 35px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        visibility: hidden;
+    }
+    &:hover :first-child {
+        visibility: hidden;
+    }
+    &:hover :nth-child(2) {
+        visibility: visible;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-animation: fill 1s; 
+        -webkit-animation: fill 1s;
+        animation: fill linear 1s; 
+    }
+}
+@keyframes fill { 
+    0% { 
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
