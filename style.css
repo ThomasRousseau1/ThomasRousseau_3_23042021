@@ -292,7 +292,6 @@ main {
   transform: scale(1.1);
   background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
-  box-shadow: none;
 }
 .fonctionnement__box .number {
   background-color: #9356DC;
@@ -329,6 +328,11 @@ main {
   }
   .fonctionnement__box:hover {
     transform: scale(1);
+    background: #f6f6f6;
+    color: #000;
+  }
+  .fonctionnement__box:hover .fonctionnement__icon {
+    color: #9356DC;
   }
 
   .number {
@@ -338,6 +342,7 @@ main {
   .fonctionnement__icon {
     color: grey;
     margin: 15px;
+    visibility: visible;
   }
 
   .fonctionnement__text {

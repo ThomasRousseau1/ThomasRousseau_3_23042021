@@ -22,7 +22,7 @@
     }
     &:hover :nth-child(2) {
         visibility: visible;
-        background: linear-gradient($colour-secondary, $colour-primary);
+        background: $colour-gradient;
         -webkit-background-clip: text;
                 background-clip: text;
         -webkit-text-fill-color: transparent;
