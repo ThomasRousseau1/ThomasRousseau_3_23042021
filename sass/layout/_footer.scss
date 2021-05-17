@@ -39,22 +39,24 @@
 }
 
 @media screen and(max-width: 768px) {
-    footer {
-        height: 220px;
-    }
-    .footer__title { 
+.footer {
+    height: 220px;
+
+    &__title { 
         margin: 10px;
         text-align: start;
         padding-left: 20px;
         font-size: 1.5em;
     }
-    .footer__container { 
+    
+    &__container { 
         flex-wrap: wrap;
         flex-direction: column;
         padding-left: 20px;
     }
 
-    .footer__line {
+    &__line {
         padding-top: 10px;
-    }
+    }    
+}
 }

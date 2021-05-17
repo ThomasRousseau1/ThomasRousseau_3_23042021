@@ -21,48 +21,47 @@ main {
     background: #fff;
     height: 350px;
     margin-bottom: 80px;
-}
-.fonctionnement__title { 
-    text-align: center;
-    padding: 20px;
+    &__title { 
+        text-align: center;
+        padding: 20px;
+    }
 }
 
-.fonctionnement__box__container {
+
+.box {
     @extend %flex-row;
     justify-content: space-evenly;
-}
-
-.fonctionnement__box { 
-    display: flex;
-    flex-direction: column;
-    background-color: $colour-background-grey;
-    width: 15rem;
-    height: 150px;
-    padding-top: 30px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 1.5rem;
-    box-shadow: $box-shadow;
-    cursor: pointer;
-    transition: transform 300ms;
-    &:hover { 
-        transform: scale(1.10);
-        background: $colour-gradient;
-        color: #fff;
+    &__container { 
+        display: flex;
+        flex-direction: column;
+        background-color: $colour-background-grey;
+        width: 15rem;
+        height: 150px;
+        padding-top: 30px;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 1.5rem;
+        box-shadow: $box-shadow;
+        cursor: pointer;
+        transition: transform 300ms;
+        &:hover { 
+            transform: scale(1.10);
+            background: $colour-gradient;
+            color: #fff;
+        }
     }
-
-.number { 
-    background-color: $colour-primary;
-    color: #fff;
-    width: 30px;
-    border-radius: 50%;
-    align-self: center;
-}
+    &__number { 
+        background-color: $colour-primary;
+        color: #fff;
+        width: 30px;
+        border-radius: 50%;
+        align-self: center;
+        }
 }
 
 /* Pour cacher les icônes */
 @media screen and (min-width: 768px) {
-    .fonctionnement__icon {
+    .box__icon {
         visibility: hidden;
         display: none;
     }
@@ -71,41 +70,39 @@ main {
 @media screen and (max-width: 768px) { 
     .container__fonctionnement { 
         height: 500px;
-    }
-    .fonctionnement__box__container { 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fonctionnement__box {
-        margin: 10px;
-        height: 80px;
-        width: 90%;
-        flex-direction: row;
-        padding: 0;
-        align-items: center;
-        &:hover { 
-            transform: scale(1);
-            background: $colour-background-grey;
-            color: #000;
+        .box { 
+            flex-direction: column;
+            align-items: center;
+            &__container {
+                margin: 10px;
+                height: 80px;
+                width: 90%;
+                flex-direction: row;
+                padding: 0;
+                align-items: center;
+                &:hover { 
+                    transform: scale(1);
+                    background: $colour-background-grey;
+                    color: #000;
+                }
+                &:hover .box__icon { 
+                    color: $colour-primary;
+                }
+            }
+            &__number { 
+                margin-left: -10px;
+            }
+            &__icon { 
+                color: grey;
+                margin: 15px;
+                visibility: visible;
+            }
+    
+            &__text { 
+                margin: 15px;
+            }
+        
         }
-        &:hover .fonctionnement__icon { 
-            color: $colour-primary;
-        }
-    }
-
-    .number { 
-        margin-left: -10px;
-    }
-
-    .fonctionnement__icon { 
-        color: grey;
-        margin: 15px;
-        visibility: visible;
-    }
-
-    .fonctionnement__text { 
-        margin: 15px;
     }
 }
 
@@ -115,12 +112,12 @@ main {
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
+    &__title { 
+        text-align: center;
+        margin-bottom: 50px;
+    }
 }
 
-.container__card__title { 
-    text-align: center;
-    margin-bottom: 50px;
-}
 .card { 
     background: #fff;
     width: 45%;
@@ -129,40 +126,35 @@ main {
     margin-bottom: 50px;
     box-shadow: $box-shadow;
     position: relative;
-}
-
-.card__img {
-    height: 80%;
-    & .restaurant-img { 
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+    &__img {
+        height: 80%;
+        & .restaurant-img { 
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
     }
-
-}
-
-.card__infos {
-    margin-left: 20px;
-}
-
-.card__infos h3, p { 
-    margin: 10px 0px 10px 0px;
-}
-
-.menus__new {
-    width: 80px;
-    padding: 10px;
-    text-align: center;
-    display: inline-block;
-    color: #32a588;
-    background-color: #99E2D0;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 20px;
+    &__infos {
+        margin-left: 20px;
+        & h3, p { 
+            margin: 10px 0px 10px 0px;
+        }
+    } 
+    &__new {
+        width: 80px;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        color: #32a588;
+        background-color: #99E2D0;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px;
+    }   
 }
 
 /* Pour Laptop L */
@@ -184,22 +176,21 @@ main {
 }
 
 @media  screen and(max-width: 425px) {
-    .fonctionnement__text { 
+    .container__fonctionnement__title { 
+        padding-left: 0;
+    }
+    .box__text { 
         font-size: 5vw;
     }
     .card {
         width: 100%;
         height: 250px;
-    }
-
-    .card__img {
-        height: 180px;
+        &__img { 
+            height: 180px;
+        }
     }
     h2 { 
         display: flex;
         padding-left: 20px;
-    }
-    .fonctionnement__title { 
-        padding-left: 0;
     }
 }

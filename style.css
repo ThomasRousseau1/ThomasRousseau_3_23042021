@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.fonctionnement__box__container, .footer__line, .footer__container {
+.box, .footer__line, .footer__container {
   display: flex;
   flex-direction: row;
 }
@@ -172,7 +172,7 @@ header .header__location {
   text-align: center;
   margin-top: 5px;
 }
-header .header__location .header__location i {
+header .header__location i {
   margin-right: 10px;
 }
 
@@ -218,23 +218,20 @@ header .header__location .header__location i {
 }
 
 @media screen and (max-width: 768px) {
-  footer {
+  .footer {
     height: 220px;
   }
-
   .footer__title {
     margin: 10px;
     text-align: start;
     padding-left: 20px;
     font-size: 1.5em;
   }
-
   .footer__container {
     flex-wrap: wrap;
     flex-direction: column;
     padding-left: 20px;
   }
-
   .footer__line {
     padding-top: 10px;
   }
@@ -263,17 +260,15 @@ main {
   height: 350px;
   margin-bottom: 80px;
 }
-
-.fonctionnement__title {
+.container__fonctionnement__title {
   text-align: center;
   padding: 20px;
 }
 
-.fonctionnement__box__container {
+.box {
   justify-content: space-evenly;
 }
-
-.fonctionnement__box {
+.box__container {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
@@ -287,12 +282,12 @@ main {
   cursor: pointer;
   transition: transform 300ms;
 }
-.fonctionnement__box:hover {
+.box__container:hover {
   transform: scale(1.1);
   background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
 }
-.fonctionnement__box .number {
+.box__number {
   background-color: #9356DC;
   color: #fff;
   width: 30px;
@@ -302,7 +297,7 @@ main {
 
 /* Pour cacher les icônes */
 @media screen and (min-width: 768px) {
-  .fonctionnement__icon {
+  .box__icon {
     visibility: hidden;
     display: none;
   }
@@ -311,13 +306,11 @@ main {
   .container__fonctionnement {
     height: 500px;
   }
-
-  .fonctionnement__box__container {
+  .container__fonctionnement .box {
     flex-direction: column;
     align-items: center;
   }
-
-  .fonctionnement__box {
+  .container__fonctionnement .box__container {
     margin: 10px;
     height: 80px;
     width: 90%;
@@ -325,26 +318,23 @@ main {
     padding: 0;
     align-items: center;
   }
-  .fonctionnement__box:hover {
+  .container__fonctionnement .box__container:hover {
     transform: scale(1);
     background: #f6f6f6;
     color: #000;
   }
-  .fonctionnement__box:hover .fonctionnement__icon {
+  .container__fonctionnement .box__container:hover .box__icon {
     color: #9356DC;
   }
-
-  .number {
+  .container__fonctionnement .box__number {
     margin-left: -10px;
   }
-
-  .fonctionnement__icon {
+  .container__fonctionnement .box__icon {
     color: grey;
     margin: 15px;
     visibility: visible;
   }
-
-  .fonctionnement__text {
+  .container__fonctionnement .box__text {
     margin: 15px;
   }
 }
@@ -355,7 +345,6 @@ main {
   align-content: center;
   justify-content: space-between;
 }
-
 .container__card__title {
   text-align: center;
   margin-bottom: 50px;
@@ -370,7 +359,6 @@ main {
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   position: relative;
 }
-
 .card__img {
   height: 80%;
 }
@@ -381,16 +369,13 @@ main {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
 .card__infos {
   margin-left: 20px;
 }
-
-.card__infos h3, p {
+.card__infos h3, .card__infos p {
   margin: 10px 0px 10px 0px;
 }
-
-.menus__new {
+.card__new {
   width: 80px;
   padding: 10px;
   text-align: center;
@@ -421,7 +406,11 @@ main {
   }
 }
 @media screen and (max-width: 425px) {
-  .fonctionnement__text {
+  .container__fonctionnement__title {
+    padding-left: 0;
+  }
+
+  .box__text {
     font-size: 5vw;
   }
 
@@ -429,7 +418,6 @@ main {
     width: 100%;
     height: 250px;
   }
-
   .card__img {
     height: 180px;
   }
@@ -437,10 +425,6 @@ main {
   h2 {
     display: flex;
     padding-left: 20px;
-  }
-
-  .fonctionnement__title {
-    padding-left: 0;
   }
 }
 /*IMAGE PRINCIPALE*/
@@ -479,10 +463,10 @@ main {
   font-size: 2rem;
   width: 100%;
 }
-.menus .menus__titles {
+.menus__titles {
   font-weight: lighter;
 }
-.menus .menus__titles__border {
+.menus__border {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   margin-bottom: 10px;
@@ -503,6 +487,10 @@ main {
   animation: apparition 1.5s cubic-bezier(0, 0, 0, 1) forwards;
   /* Pour que chaque enfant apparaisse un par un */
   /* Icones reservation pour les plats */
+}
+.menus__card p {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 .menus__card p:first-child {
   font-size: 1.1rem;
@@ -597,7 +585,6 @@ main {
     justify-content: space-evenly;
   }
 }
-/* Menu entrées La note enchantée */
 /* Tablettes et portables */
 @media screen and (max-width: 780px) {
   .menus {
@@ -609,26 +596,25 @@ main {
     align-items: center;
   }
 
-  .menus__card {
+  .menus__container {
+    align-items: center;
+    width: 90%;
+  }
+  .menus__container .menus__card {
     display: inline-block;
     width: 100%;
     height: 70px;
     text-align: start;
     padding: 0;
   }
-  .menus__card .menus__price {
+  .menus__container .menus__card .menus__price {
     float: right;
     position: relative;
-    bottom: 40px;
+    bottom: 30px;
   }
-  .menus__card p {
+  .menus__container .menus__card p {
     padding-left: 10px;
     padding-right: 10px;
-  }
-
-  .menus__container {
-    align-items: center;
-    width: 90%;
   }
 
   .menus__main__title {

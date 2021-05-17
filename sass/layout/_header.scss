@@ -10,7 +10,7 @@ header {
             height: 40px;
         }
     }
-    
+
     .header__location { 
         background-color: #eaeaea;
         width: 100%;
@@ -18,7 +18,7 @@ header {
         padding-top: 20px;
         text-align: center;
         margin-top: 5px;
-        .header__location i { 
+        & i { 
             margin-right: 10px;
         }
     }   
