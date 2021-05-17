@@ -99,12 +99,35 @@ h1 {
   width: 100%;
   height: 100%;
   background: #353535;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 5;
-  animation: fade-in 3s ease-in-out normal forwards;
+  animation: fade-in 3s ease-out normal forwards;
 }
+.loader .loader__letters {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 50%;
+}
+.loader .loader__letters .letter {
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  animation: letters 0.8s linear 2;
+}
+.loader .loader__letters .letter.letter1 {
+  color: #9356DC;
+  animation-delay: 0.1s;
+}
+.loader .loader__letters .letter.letter2 {
+  color: #FF79DA;
+  animation-delay: 0.2s;
+}
+.loader .loader__letters .letter.letter3 {
+  color: #99E2D0;
+  animation-delay: 0.3s;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 1;
@@ -118,40 +141,16 @@ h1 {
     display: none;
   }
 }
-
-.loader__letters {
-  margin-bottom: 1000px;
-}
-.loader__letters .letter {
-  font-size: 3rem;
-  font-family: "Shrikhand", cursive;
-  animation: letters 0.8s linear infinite;
-}
-.loader__letters .letter.letter1 {
-  color: #9356DC;
-  animation-delay: 0.1s;
-}
-.loader__letters .letter.letter2 {
-  color: #FF79DA;
-  animation-delay: 0.2s;
-}
-.loader__letters .letter.letter3 {
-  color: #99E2D0;
-  animation-delay: 0.3s;
-}
 @keyframes letters {
   0% {
     opacity: 1;
-    text-shadow: 0 0 7px #000;
   }
   100% {
     opacity: 0;
-    text-shadow: none;
     visibility: hidden;
     display: none;
   }
 }
-
 header {
   background-color: #fff;
 }

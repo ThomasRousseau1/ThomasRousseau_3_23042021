@@ -3,56 +3,56 @@
     width: 100%;
     height: 100%;
     background: $colour-footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 5;
-    animation: fade-in 3s ease-in-out normal forwards;
-    @keyframes fade-in {
-        0% {
-            opacity: 1;
-        }
-        80% {
-            opacity: 1;
-        }
-        100% { 
-            opacity: 0;
-            visibility: hidden;
-            display: none; 
+    animation: fade-in 3s ease-out normal forwards;
+    .loader__letters { 
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        top: 50%;
+        .letter { 
+            font-size: 3rem;
+            font-family: 'Shrikhand', cursive;
+            animation: letters 0.8s linear 2;
+            &.letter1 {
+                color: $colour-primary;
+                animation-delay: 0.1s;
+            }
+            &.letter2 {
+                color: $colour-secondary;
+                animation-delay: 0.2s;
+            }
+            &.letter3 {
+                color: $colour-tertiary;
+                animation-delay: 0.3s;
+            }
+        
         }
     }
 }
 
-.loader__letters { 
-    margin-bottom: 1000px;
-    .letter { 
-        font-size: 3rem;
-        font-family: 'Shrikhand', cursive;
-        animation: letters 0.8s linear infinite;
-        &.letter1 {
-            color: $colour-primary;
-            animation-delay: 0.1s;
-        }
-        &.letter2 {
-            color: $colour-secondary;
-            animation-delay: 0.2s;
-        }
-        &.letter3 {
-            color: $colour-tertiary;
-            animation-delay: 0.3s;
-        }
-    
-        @keyframes letters { 
-            0% { 
-                opacity: 1;
-                text-shadow: 0 0 7px #000;
-            }
-            100% { 
-                opacity: 0; 
-                text-shadow: none;
-                visibility: hidden;
-                display: none;
-            }
-        }
+@keyframes fade-in {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        visibility: hidden;
+        display: none; 
+    }
+}
+@keyframes letters { 
+    0% { 
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0; 
+        visibility: hidden;
+        display: none;
     }
 }
