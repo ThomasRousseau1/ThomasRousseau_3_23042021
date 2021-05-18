@@ -8,6 +8,8 @@
     height: 500px;
     align-self: center;
     margin-bottom: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .restaurant__title { 
     font-family: 'Shrikhand', cursive;
@@ -19,7 +21,7 @@
 .menus { 
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -49,7 +51,7 @@
 .menus__card {
     position: relative;
     background-color: #fff;
-    width: 350px;
+    width: 25rem;
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 15px;
@@ -66,13 +68,14 @@
         font-size: 1.1rem;
     }
 
-    &__description { 
+    & .menus__description { 
         font-size: 1rem;
         font-weight: lighter;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
     &:hover { 
         .card__check {
             display: inline-block;
@@ -83,7 +86,6 @@
         .menus__price { 
             transition: 400ms;
             margin-right: 80px;
-            margin-left: 10px;
         }
     }
     /* Pour que chaque enfant apparaisse un par un */
@@ -95,6 +97,9 @@
     }
     &:nth-child(5) { 
         animation-delay: 0.3s;
+    }
+    &:nth-child(6) { 
+        animation-delay: 0.4s;
     }
         /* Icones reservation pour les plats */
 .card__check { 
@@ -195,10 +200,6 @@
             }
             & .menus__description { 
                 font-size: 1rem;
-                font-weight: lighter;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
             }
             & p { 
                 padding-left: 10px;

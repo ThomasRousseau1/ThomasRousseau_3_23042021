@@ -438,6 +438,8 @@ main {
   height: 500px;
   align-self: center;
   margin-bottom: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .restaurant__title {
@@ -450,7 +452,7 @@ main {
 .menus {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -477,7 +479,7 @@ main {
 .menus__card {
   position: relative;
   background-color: #fff;
-  width: 350px;
+  width: 25rem;
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 15px;
@@ -496,7 +498,7 @@ main {
 .menus__card p:first-child {
   font-size: 1.1rem;
 }
-.menus__card__description {
+.menus__card .menus__description {
   font-size: 1rem;
   font-weight: lighter;
   overflow: hidden;
@@ -512,7 +514,6 @@ main {
 .menus__card:hover .menus__price {
   transition: 400ms;
   margin-right: 80px;
-  margin-left: 10px;
 }
 .menus__card:nth-child(3) {
   animation-delay: 0.1s;
@@ -522,6 +523,9 @@ main {
 }
 .menus__card:nth-child(5) {
   animation-delay: 0.3s;
+}
+.menus__card:nth-child(6) {
+  animation-delay: 0.4s;
 }
 .menus__card .card__check {
   position: absolute;
@@ -616,10 +620,6 @@ main {
   }
   .menus__container .menus__card .menus__description {
     font-size: 1rem;
-    font-weight: lighter;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .menus__container .menus__card p {
     padding-left: 10px;
