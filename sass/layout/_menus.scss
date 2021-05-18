@@ -54,6 +54,7 @@
     padding: 15px;
     border-radius: 15px;
     box-shadow: $box-shadow;
+    overflow: hidden;
     cursor: pointer;
     visibility: hidden;
     animation: apparition 1.5s cubic-bezier(0,0,0,1) forwards;
@@ -65,7 +66,7 @@
         font-size: 1.1rem;
     }
 
-    & p:nth-child(2) { 
+    &__description { 
         font-size: 1rem;
         font-weight: lighter;
         overflow: hidden;
@@ -82,10 +83,8 @@
         .menus__price { 
             transition: 400ms;
             margin-right: 80px;
+            margin-left: 10px;
         }
-        & p:nth-child(2){
-            width: 65%;
-        }    
     }
     /* Pour que chaque enfant apparaisse un par un */
     &:nth-child(3) { 
@@ -186,10 +185,20 @@
             height: 70px;
             text-align: start;
             padding: 0;
+            & .menus__text { 
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
             & .menus__price { 
-                float: right;
-                position: relative;
-                bottom: 30px;
+                justify-content: flex-end;
+            }
+            & .menus__description { 
+                font-size: 1rem;
+                font-weight: lighter;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             & p { 
                 padding-left: 10px;
