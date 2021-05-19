@@ -57,6 +57,11 @@ main {
         border-radius: 50%;
         align-self: center;
         }
+    & i { 
+        display: none;
+        visibility: hidden;
+    }
+    
 }
 
 /* Pour cacher les icônes */
@@ -95,6 +100,7 @@ main {
             &__icon { 
                 color: grey;
                 margin: 15px;
+                display: inline-block;
                 visibility: visible;
             }
     

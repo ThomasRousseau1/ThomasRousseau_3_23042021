@@ -294,6 +294,10 @@ main {
   border-radius: 50%;
   align-self: center;
 }
+.box i {
+  display: none;
+  visibility: hidden;
+}
 
 /* Pour cacher les icônes */
 @media screen and (min-width: 768px) {
@@ -332,6 +336,7 @@ main {
   .container__fonctionnement .box__icon {
     color: grey;
     margin: 15px;
+    display: inline-block;
     visibility: visible;
   }
   .container__fonctionnement .box__text {
