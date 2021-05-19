@@ -172,6 +172,20 @@
 
 /* Tablettes et portables */ 
 
+@media screen and (min-width: 878px) {
+    .menus__container { 
+        margin-top: 20px;
+        margin-bottom: 20px;
+        & .menus__titles { 
+            text-align: center;
+        }
+        & .menus__border { 
+            width: 100%;
+            border-radius: 25%
+        }
+    }
+}
+
 @media screen and (max-width: 780px) {
     .main-image {
         height: 22rem;
@@ -222,7 +236,7 @@
 
     .restaurant__title { 
         font-size: 7vw;
-        margin-right: 70px;
+        margin-right: 40px;
     }
     .menus__main__title { 
         justify-content: space-evenly;
