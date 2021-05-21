@@ -60,7 +60,7 @@
     overflow: hidden;
     cursor: pointer;
     visibility: hidden;
-    animation: apparition 1s cubic-bezier(0,0,0,1) forwards;
+    animation: apparition 1s ease forwards;
     & p { 
         margin-top: 10px;
         margin-bottom: 0;
@@ -80,9 +80,6 @@
     &:hover { 
         .card__check {
             display: inline-block;
-        }
-        .card__check__icon { 
-            transform: rotate(-360deg);
         }
         .menus__price { 
             transition: 400ms;
@@ -212,9 +209,6 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-            }
-            & .menus__price { 
-                justify-content: flex-end;
             }
             & .menus__description { 
                 font-size: 1rem;

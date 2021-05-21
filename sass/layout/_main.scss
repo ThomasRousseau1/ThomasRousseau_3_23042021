@@ -12,8 +12,11 @@ main {
         text-align: center;
         margin: 10px;
     }
-    & :nth-child(3) {
-        margin: 20px;
+    & h1 { 
+        margin: 20px 20px 10px 20px;
+    }
+    & button{
+        margin-top: 20px;
     }
 }
 
@@ -38,7 +41,7 @@ main {
         width: 15rem;
         height: 150px;
         padding-top: 30px;
-        border-radius: 50px;
+        border-radius: 25px;
         text-align: center;
         font-size: 1.5rem;
         box-shadow: $box-shadow;
@@ -78,8 +81,8 @@ main {
         .box { 
             flex-direction: column;
             align-items: center;
-            &__container {
-                margin: 10px;
+            &__container {           
+                margin: 10px 10px 10px 20px;
                 height: 80px;
                 width: 90%;
                 flex-direction: row;
@@ -95,7 +98,7 @@ main {
                 }
             }
             &__number { 
-                margin-left: -10px;
+                margin-left: -15px;
             }
             &__icon { 
                 color: grey;

@@ -1,21 +1,93 @@
 /* Bouton page d'accueil partie réservation */
-.reservation__button {
-    width:230px;
-    height: 50px;
-    border-radius: 50px;
-    background: $colour-gradient;
-    border-style: none;
-    color: #fff;
-    box-shadow: $box-shadow;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 300ms;
-    margin: auto;
+ 
+/* Façon 1 */
+/*.btn {
     display: block;
-    &:hover{
-        transform: scale(1.15);
+    margin: auto;
+    border-radius: 50px;
+    border-style: none;
+    background: $colour-gradient;
+    box-shadow: $box-shadow;
+    position: relative;
+    width: 230px;
+    height: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1;
+    &:hover {
+        cursor: pointer;
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after { 
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         background: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
+        box-shadow: $box-shadow-darker;
+        border-radius: 50px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}*/
+
+/*Façon 2*/
+/*.btn {
+    border-radius: 50px;
+    border-style: none;
+    background: $colour-gradient;
+    box-shadow: $box-shadow;
+    position: relative;
+    width: 230px;
+    height: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1;
+    &:hover { 
+         .btn__bg { 
+            opacity: 1;
+        }
+    }
+    &__bg { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
+        box-shadow: $box-shadow-darker;
+        border-radius: 50px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}*/
+
+
+/*Façon 3*/
+.btn { 
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+    border-style: none;
+    background: $colour-gradient;
+    box-shadow: $box-shadow;
+    width: 230px;
+    height: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 300ms;
+    &:hover { 
+        transform: scale(1.1);
+        opacity: 0.8;
         box-shadow: $box-shadow-darker;
     }
 }
