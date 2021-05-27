@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.box, .footer__line, .footer__container {
+.box, .footer__line, .footer__container, .loader .loader__letters {
   display: flex;
   flex-direction: row;
 }
@@ -26,75 +26,6 @@ h1 {
 }
 
 /* Bouton page d'accueil partie réservation */
-/* Façon 1 */
-/*.btn {
-    display: block;
-    margin: auto;
-    border-radius: 50px;
-    border-style: none;
-    background: $colour-gradient;
-    box-shadow: $box-shadow;
-    position: relative;
-    width: 230px;
-    height: 50px;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    z-index: 1;
-    &:hover {
-        cursor: pointer;
-        &::after {
-            opacity: 1;
-        }
-    }
-    &::after { 
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
-        box-shadow: $box-shadow-darker;
-        border-radius: 50px;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
-}*/
-/*Façon 2*/
-/*.btn {
-    border-radius: 50px;
-    border-style: none;
-    background: $colour-gradient;
-    box-shadow: $box-shadow;
-    position: relative;
-    width: 230px;
-    height: 50px;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    z-index: 1;
-    &:hover { 
-         .btn__bg { 
-            opacity: 1;
-        }
-    }
-    &__bg { 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(lighten($colour-secondary, 3%), lighten($colour-primary, 3%));
-        box-shadow: $box-shadow-darker;
-        border-radius: 50px;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
-}*/
-/*Façon 3*/
 .btn {
   display: block;
   margin: auto;
@@ -107,6 +38,7 @@ h1 {
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
   transition: 300ms;
 }
 .btn:hover {
@@ -172,8 +104,6 @@ h1 {
 .loader .loader__letters {
   position: fixed;
   width: 100%;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   top: 50%;
 }
@@ -394,7 +324,7 @@ main {
   }
   .container__fonctionnement .box__container:hover {
     transform: scale(1);
-    background: #f6f6f6;
+    background: #e4d5f6;
     color: #000;
   }
   .container__fonctionnement .box__container:hover .box__icon {
@@ -648,7 +578,7 @@ main {
 }
 @keyframes rotation {
   from {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
   to {
     transform: rotate(0);

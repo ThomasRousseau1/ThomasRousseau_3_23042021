@@ -90,7 +90,7 @@ main {
                 align-items: center;
                 &:hover { 
                     transform: scale(1);
-                    background: $colour-background-grey;
+                    background: lighten($colour-primary, 30%);
                     color: #000;
                 }
                 &:hover .box__icon { 
