@@ -7,14 +7,14 @@
     width: 100%;
     height: 30rem;
     align-self: center;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 .restaurant__title { 
     font-family: 'Shrikhand', cursive;
     font-size: 2.5rem;
-    margin-right: 20px;
+    margin-right: 1rem;
     font-weight: normal;
 }
 
@@ -23,8 +23,8 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: $colour-background-grey;
 
     .menus__main__title { 
@@ -37,14 +37,15 @@
 
     &__titles {
         font-weight: lighter;
+        margin-top: 1rem;
     }
 
     &__border { 
         border-bottom: 3px solid $colour-tertiary;
         width: 40px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border-radius: 25%;
+        margin-bottom: 1rem;
+        margin-top: 0.6rem;
+        border-radius: 10%;
     }   
 }
 
@@ -54,7 +55,7 @@
     background-color: #fff;
     width: 25rem;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: $box-shadow;
     overflow: hidden;
@@ -62,7 +63,7 @@
     visibility: hidden;
     animation: apparition 1s ease forwards;
     & p { 
-        margin-top: 10px;
+        margin-top: 0.6rem;
         margin-bottom: 0;
     }
     & p:first-child  {
@@ -83,7 +84,7 @@
         }
         .menus__price { 
             transition: 400ms;
-            margin-right: 80px;
+            margin-right: 5rem;
         }
     }
     /* Pour que chaque enfant apparaisse un par un */
@@ -172,8 +173,7 @@
 
 @media screen and (min-width: 878px) {
     .menus__container { 
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 1.2rem 0 1.2rem 0;
         & .menus__titles { 
             text-align: center;
         }
@@ -192,7 +192,7 @@
         flex-direction: column;
         position: relative;
         z-index: 1;
-        margin-top: -100px;
+        margin-top: -6rem;
         border-radius: 50px;
         align-items: center;
     }
@@ -214,8 +214,7 @@
                 font-size: 1rem;
             }
             & p { 
-                padding-left: 10px;
-                padding-right: 10px;
+                padding: 0 0.5rem 0 0.5rem;
             }
         }
     }
@@ -231,7 +230,7 @@
 
     .restaurant__title { 
         font-size: 7vw;
-        margin-right: 40px;
+        margin-right: 2rem;
     }
     .menus__main__title { 
         justify-content: space-evenly;

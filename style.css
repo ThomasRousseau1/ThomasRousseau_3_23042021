@@ -170,7 +170,7 @@ header .header__location {
   margin-top: 5px;
 }
 header .header__location i {
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 
 /*POUR LES PAGES MENU*/
@@ -185,8 +185,8 @@ header .header__location i {
 
 .footer {
   background-color: #353535;
-  height: 200px;
-  margin-top: 70px;
+  height: 220px;
+  margin-top: 3rem;
 }
 .footer p {
   margin: 0;
@@ -199,7 +199,7 @@ header .header__location i {
 }
 .footer__logo {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 0.5rem;
 }
 .footer__title {
   color: #fff;
@@ -207,30 +207,24 @@ header .header__location i {
   font-size: 2em;
 }
 .footer__line {
-  padding-top: 20px;
+  padding-top: 0.5rem;
 }
 .footer__line i {
-  margin-right: 20px;
+  margin-right: 1rem;
   color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-  .footer {
-    height: 220px;
-  }
   .footer__title {
-    margin: 10px;
+    margin: 1rem;
     text-align: start;
-    padding-left: 20px;
     font-size: 1.5em;
+    padding: 0;
   }
   .footer__container {
     flex-wrap: wrap;
     flex-direction: column;
-    padding-left: 20px;
-  }
-  .footer__line {
-    padding-top: 10px;
+    padding-left: 1.2rem;
   }
 }
 main {
@@ -246,23 +240,20 @@ main {
 }
 .container__reservation h1, .container__reservation p {
   text-align: center;
-  margin: 10px;
-}
-.container__reservation h1 {
-  margin: 20px 20px 10px 20px;
+  margin: 0.5rem;
 }
 .container__reservation button {
-  margin-top: 20px;
+  margin: 1rem;
 }
 
 .container__fonctionnement {
   background: #fff;
   height: 350px;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 .container__fonctionnement__title {
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .box {
@@ -274,7 +265,7 @@ main {
   background-color: #f6f6f6;
   width: 15rem;
   height: 150px;
-  padding-top: 30px;
+  padding-top: 2rem;
   border-radius: 25px;
   text-align: center;
   font-size: 1.5rem;
@@ -293,6 +284,7 @@ main {
   width: 30px;
   border-radius: 50%;
   align-self: center;
+  font-weight: lighter;
 }
 .box i {
   display: none;
@@ -315,7 +307,7 @@ main {
     align-items: center;
   }
   .container__fonctionnement .box__container {
-    margin: 10px 10px 10px 20px;
+    margin: 0.8rem 0.8rem 0.8rem 1.3rem;
     height: 80px;
     width: 90%;
     flex-direction: row;
@@ -331,11 +323,11 @@ main {
     color: #9356DC;
   }
   .container__fonctionnement .box__number {
-    margin-left: -15px;
+    margin-left: -1rem;
   }
   .container__fonctionnement .box__icon {
     color: grey;
-    margin: 15px;
+    margin: 1rem;
     display: inline-block;
     visibility: visible;
   }
@@ -352,7 +344,7 @@ main {
 }
 .container__card__title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -397,8 +389,7 @@ main {
 /* Pour Laptop L */
 @media screen and (max-width: 1440px) {
   .container__card {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 1rem 0 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -429,7 +420,7 @@ main {
 
   h2 {
     display: flex;
-    padding-left: 20px;
+    padding-left: 1rem;
   }
 }
 /*IMAGE PRINCIPALE*/
@@ -442,7 +433,7 @@ main {
   width: 100%;
   height: 30rem;
   align-self: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
@@ -450,7 +441,7 @@ main {
 .restaurant__title {
   font-family: "Shrikhand", cursive;
   font-size: 2.5rem;
-  margin-right: 20px;
+  margin-right: 1rem;
   font-weight: normal;
 }
 
@@ -459,8 +450,8 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: #f6f6f6;
 }
 .menus .menus__main__title {
@@ -472,13 +463,14 @@ main {
 }
 .menus__titles {
   font-weight: lighter;
+  margin-top: 1rem;
 }
 .menus__border {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  border-radius: 25%;
+  margin-bottom: 1rem;
+  margin-top: 0.6rem;
+  border-radius: 10%;
 }
 
 .menus__card {
@@ -487,7 +479,7 @@ main {
   background-color: #fff;
   width: 25rem;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 1rem;
   border-radius: 15px;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -498,7 +490,7 @@ main {
   /* Icones reservation pour les plats */
 }
 .menus__card p {
-  margin-top: 10px;
+  margin-top: 0.6rem;
   margin-bottom: 0;
 }
 .menus__card p:first-child {
@@ -516,7 +508,7 @@ main {
 }
 .menus__card:hover .menus__price {
   transition: 400ms;
-  margin-right: 80px;
+  margin-right: 5rem;
 }
 .menus__card:nth-child(3) {
   animation-delay: 0.1s;
@@ -594,8 +586,7 @@ main {
 /* Tablettes et portables */
 @media screen and (min-width: 878px) {
   .menus__container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 1.2rem 0 1.2rem 0;
   }
   .menus__container .menus__titles {
     text-align: center;
@@ -614,7 +605,7 @@ main {
     flex-direction: column;
     position: relative;
     z-index: 1;
-    margin-top: -100px;
+    margin-top: -6rem;
     border-radius: 50px;
     align-items: center;
   }
@@ -639,8 +630,7 @@ main {
     font-size: 1rem;
   }
   .menus__container .menus__card p {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 0.5rem 0 0.5rem;
   }
 
   .menus__main__title {
@@ -651,7 +641,7 @@ main {
 @media screen and (max-width: 500px) {
   .restaurant__title {
     font-size: 7vw;
-    margin-right: 40px;
+    margin-right: 2rem;
   }
 
   .menus__main__title {
